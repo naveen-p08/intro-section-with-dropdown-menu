@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!--          Stylesheets              -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!--          Fonts           -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+
+  <!--          Scripts                  -->
+
+  <script src="main.js" defer></script>
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+
+<body>
+  <header class="primary-header padding-inline">
+    <div class="container flex">
+
+      <img src="images/logo.svg" alt="snap logo">
+
+      <nav id="primary-navigation">
+        <ul class="nav-list">
+          <li>
+            Features
+            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-down.svg" alt="">
+            <img aria-hidden="true" data-dropdown-on="true" src="images/icon-arrow-up.svg" alt="">
+          </li>
+          <li>
+            Company
+            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-down.svg" alt="">
+            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-up.svg" alt="">
+          </li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+
+      <ul>
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Register</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="container grid">
+
+      <div class="hero-img">
+        <img class="mobile-img" src="images/image-hero-mobile.png" alt="a guy with laptop">
+        <img class="large-screen" src="images/image-hero-desktop.png" alt="a guy with laptop">
+      </div>
+
+      <div class="hero-content padding-inline">
+        <h1 class="hero-heading">Make <br class="large-only"> remote work</h1>
+        <p class="hero-text">
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="button bg-black">Learn more</button>
+
+        <div class="clients">
+          <img src="images/client-databiz.svg" alt="databiz logo">
+          <img src="images/client-audiophile.svg" alt="audiophile logo">
+          <img src="images/client-meet.svg" alt="meet logo">
+          <img src="images/client-maker.svg" alt="maker logo">
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
