@@ -7,7 +7,7 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <!--          Stylesheets              -->
 
   <link rel="stylesheet" href="style.css">
@@ -33,31 +33,100 @@
 
 <body>
   <header class="primary-header padding-inline">
-    <div class="container flex">
+    <div class="container">
 
-      <img src="images/logo.svg" alt="snap logo">
+      <a href="#"><img src="images/logo.svg" alt="snap logo"></a>
 
-      <nav id="primary-navigation">
-        <ul class="nav-list">
+      <div class="menu-bar" id="menu-bar">
+        <nav class="primary-navigation" aria-label="main menu" aria-expanded="false">
+
+          <ul class="menu-list">
+
+            <li class="menu-list-item-container">
+              <button class="menu-item-button" id="features-button">
+                Features
+                <img aria-hidden="true" src="images/icon-arrow-down.svg" alt="">
+                <img class="hidden" aria-hidden="true" src="images/icon-arrow-up.svg" alt="">
+              </button>
+
+              <ul class="sub-menu-items" id="features-menu" aria-labelledby="features-button" aria-expanded="false">
+                <li>
+                  <a href="#">
+                    <div>
+                      <img aria-hidden="true" src="images/icon-todo.svg" alt="">
+                      <span>To Do List</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div>
+                      <img aria-hidden="true" src="images/icon-calendar.svg" alt="">
+                      <span>Calendar</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div>
+                      <img aria-hidden="true" src="images/icon-reminders.svg" alt="">
+                      <span>Remainders</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div>
+                      <img aria-hidden="true" src="images/icon-planning.svg" alt="">
+                      <span>Planning</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+
+            </li>
+
+            <li class="menu-list-item-container">
+              <button class="menu-item-button" id="company-button">
+                Company
+                <img aria-hidden="true" src="images/icon-arrow-down.svg" alt="">
+                <img class="hidden" aria-hidden="true" src="images/icon-arrow-up.svg" alt="">
+              </button>
+
+              <ul class="sub-menu-items company-list " aria-labelledby="company-button" aria-expanded="false">
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">Careers</a>
+            </li>
+
+            <li>
+              <a href="#">About</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <ul class="user-corner">
+          <li><a href="#">Login</a></li>
           <li>
-            Features
-            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-down.svg" alt="">
-            <img aria-hidden="true" data-dropdown-on="true" src="images/icon-arrow-up.svg" alt="">
+            <button class="button register-btn">Register</button>
           </li>
-          <li>
-            Company
-            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-down.svg" alt="">
-            <img aria-hidden="true" data-dropdown-on="false" src="images/icon-arrow-up.svg" alt="">
-          </li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">About</a></li>
         </ul>
-      </nav>
+      </div>
 
-      <ul>
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Register</a></li>
-      </ul>
+      <div class="mobile-toggle-container">
+        <button class="mobile-toggle"  aria-controls="menu-bar">
+          <span class="visually-hidden">Menu</span>
+          <img class="mobile-hamburger" aria-hidden="true" src="images/icon-menu.svg" alt="">
+          <img class="mobile-close hidden" aria-hidden="true" src="images/icon-close-menu.svg" alt="">
+        </button>
+      </div>
+
     </div>
   </header>
 
