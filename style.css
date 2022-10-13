@@ -104,9 +104,9 @@ body {
 .primary-header > div {
     min-height: 7.5rem;
     display: flex;
-    gap: 6rem;
     align-items: center;
     width: 100%;
+    max-width: 130rem;
 }
 
 .menu-bar,
@@ -118,6 +118,7 @@ body {
 }
 
 .menu-bar {
+    margin-left: 8rem;
     width: 100%;
     gap: 3rem;
 }
@@ -143,7 +144,7 @@ body {
 
 .user-corner {
     flex: 1;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 .register-btn {
@@ -241,6 +242,14 @@ body {
 
 @media (max-width:32em) {
 
+    html {
+        overflow-x: hidden;
+    }
+
+    body{
+        overflow-x: hidden;
+    }
+
     .primary-header {
         position: relative;
     }
@@ -259,16 +268,16 @@ body {
     }
 
     .menu-bar {
+        margin-left: 0;
         background-color: var(--bg-white);
         width: 60%;
-        height: 100vh;
+        min-height: 100vh;
         position: absolute;
         top: 0;
         right: 0;
         left: 40%;
         flex-direction: column;
         justify-content: flex-start;
-        /* text-align: left; */
         align-items: flex-start;
         padding-top: 8rem;
         padding-left: 2rem;
@@ -276,6 +285,8 @@ body {
 
         transform: translatex(100%);
         transition: all 250ms ease;
+
+        overflow-x: hidden;
     }
 
     .menu-bar.active {
@@ -287,6 +298,7 @@ body {
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        gap: 2.5rem;
     }
 
     .primary-navigation {
@@ -294,7 +306,7 @@ body {
     }
 
     .user-corner {
-        margin-top: 3rem;
+        margin-top: 2rem;
         flex: none;
         flex-direction: column;
         justify-content: flex-start;
@@ -302,6 +314,14 @@ body {
         width: 100%;
     }
 
+    .user-corner li:last-child {
+        align-self: stretch;
+        margin-right: 1.5rem;
+    }
+
+    .register-btn {
+        width: 100%;
+    }
 
 
 
@@ -318,7 +338,7 @@ body {
     .sub-menu-items.active {
         height: auto;
         margin: 0;
-        padding: 2rem;
+        padding: 1.5rem;
         overflow: auto;
     }
 }
